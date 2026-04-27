@@ -125,7 +125,7 @@
 
   <nav>
     <div class="container">
-      <a href="/" class="logo">K<em>AUGIC</em></a>
+      <a href="../" class="logo">K<em>AUGIC</em></a>
       <div class="nav-links">
         <a href="#features">Features</a>
         <a href="#how">How It Works</a>
@@ -139,7 +139,7 @@
     <div class="container">
       <div class="hero-grid">
         <div class="hero-img">
-          <img src="images/product-main.jpg" alt="KAUGIC Manual Ear Wax Removal Kit" width="540" height="540">
+          <img src="../images/product-main.jpg" alt="KAUGIC Manual Ear Wax Removal Kit" width="540" height="540">
         </div>
         <div>
           <div class="badge">Best Seller in Ear Care</div>
@@ -236,7 +236,7 @@
           </div>
         </div>
         <div class="how-img">
-          <img src="images/product-detail1.jpg" alt="KAUGIC Ear Cleaner - How to Use" width="540" height="540">
+          <img src="../images/product-detail1.jpg" alt="KAUGIC Ear Cleaner - How to Use" width="540" height="540">
         </div>
       </div>
     </div>
@@ -284,9 +284,9 @@
         <p>Precision-engineered for safe, effective ear cleaning.</p>
       </div>
       <div class="gallery-grid">
-        <img src="images/product-features.jpg" alt="KAUGIC Features Overview" width="340" height="280">
-        <img src="images/product-detail2.jpg" alt="KAUGIC Ergonomic Design" width="340" height="280">
-        <img src="images/product-detail3.jpg" alt="KAUGIC Kit Contents" width="340" height="280">
+        <img src="../images/product-features.jpg" alt="KAUGIC Features Overview" width="340" height="280">
+        <img src="../images/product-detail2.jpg" alt="KAUGIC Ergonomic Design" width="340" height="280">
+        <img src="../images/product-detail3.jpg" alt="KAUGIC Kit Contents" width="340" height="280">
       </div>
     </div>
   </section>
@@ -349,9 +349,23 @@
   <footer>
     <div class="container">
       <p>&copy; 2025 KAUGIC. All rights reserved. KAUGIC is a registered trademark.</p>
-      <p style="margin-top:8px"><a href="/privacy.html">Privacy Policy</a> &middot; <a href="/terms.html">Terms of Service</a> &middot; <a href="mailto:support@w8waxyourhearing.com">Contact</a></p>
+      <p style="margin-top:8px"><a href="../privacy.html">Privacy Policy</a> &middot; <a href="../terms.html">Terms of Service</a> &middot; <a href="mailto:support@w8waxyourhearing.com">Contact</a></p>
     </div>
   </footer>
 
+
+  <script>
+    var BASE_URL = "https://lp." + window.location.hostname;
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelectorAll('.cta-link').forEach(function(link) {
+        var path = link.getAttribute('data-path');
+        if (path) {
+          link.href = BASE_URL + path;
+          link.removeAttribute('target');
+          link.removeAttribute('rel');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
